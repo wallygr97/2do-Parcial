@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Encuesta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Curved Contact Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates,
+ Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="public/css/style.css" rel='stylesheet' type='text/css' />
+    <!--fonts-->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <!--//fonts-->
+</head>
+<body>
+<!--background-->
+<!-- login -->
+<h1>Encuesta Universitaria</h1>
+<div class="login-w3l">
+    <div class="top-img-agileits-w3layouts">
+        <h2 class="sub-head-w3-agileits">Información</h2>
+        <p>Favor de llenar la encuesta!</p>
+        <div class="login-form">
+            <form action="#" method="post">
+                <input type="text" name="Nombre" placeholder="Nombre completo" required="" />
+                <input type="text" name="Sector" placeholder="sector" required="" />
+                <div class="field-half" style="margin-bottom: 1%">
+                    <select name="Nivel Escolar" required>
+                        <option value="">--Nivel Escolar--</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Universitario">Grado Universitario</option>
+                        <option value="Postgrado">Postgrado</option>
+                        <option value="Doctorado">Doctorado</option>
+                    </select>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <!-- //login -->
+</div>
+<div class="clear"></div>
+<div class="footer-agileits">
+    <p>© 2019 2013-1910 All Rights Reserved | Design by Rood Wally Gérard</p>
+</div>
+<!--//login-->
+
+<!-- Scripts -->
+
+<script src="public/js/jquery.min.js"></script>
+<script src="public/js/jquery.dropotron.min.js"></script>
+<script src="public/js/browser.min.js"></script>
+<script src="public/js/breakpoints.min.js"></script>
+<script src="public/js/util.js"></script>
+<script src="public/js/main.js"></script>
+<script>
+    $(document).ready (function () {
+        $.get("https://api.ipify.org?format=json",
+            function (data) {
+                console.log(data)
+                $("#ip").val(data.ip);
+            });
+        $("#enviarBtn").click(function(){
+            $.post( "/encuesta", {nombre: $('#nombre').val(), sector: $('#sector').val(), nivel_escolar: $("#nivel_escolar").val(), ip: $("#ip").val()}, function() {
+                alert( "success" );
+            })
+                .done(function() {
+                    alert( "second success" );
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
+                .always(function() {
+                    alert( "finished" );
+                });
+        });
+    });
+</script>
+<script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('sw.js')
+            .then(function() { console.log("Service Worker Registered"); });
+    }
+</script>
+</body>
+</html>
