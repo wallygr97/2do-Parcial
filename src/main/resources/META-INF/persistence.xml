@@ -5,12 +5,13 @@
              version="2.1">
     <persistence-unit name="MiUnidadPersistencia" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>logica.Formulario</class>
-        <class>logica.User</class>
+        <class>logica.Encuesta</class>
+        <class>logica.Sector</class>
+        <class>logica.NivelEducativo</class>
 
         <properties>
             <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test" />-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:~/2doParcial" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:~/Gerard_Encuesta" />
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="" />
