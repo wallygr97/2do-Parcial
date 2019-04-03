@@ -1,7 +1,5 @@
 package servicios;
 
-import logica.Formulario;
-
 public class ServicioFormulario  extends GestionDb<Formulario>  {
     private static ServicioFormulario instancia;
 

@@ -1,7 +1,5 @@
 package servicios;
 
-import logica.User;
-
 public class ServicioUser extends GestionDb<User>  {
     private static ServicioUser instancia;
 
