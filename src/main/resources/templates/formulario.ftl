@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -41,29 +42,21 @@
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form" action="/registrarEncuesta" method="post">
 				<span class="contact100-form-title">
-					Formulario
+					Formulario de Encuesta
 				</span>
 
-				<div class="wrap-input100 validate-input bg1" data-validate="Se debe entrar el nombre de la persona!" required>
+				<div class="wrap-input100 validate-input bg1">
 					<span class="label-input100">Nombre completo</span>
-					<input  class="input100" type="text" name="nombre" placeholder="Entra el nombre de la persona">
+					<input  class="input100" type="text" name="nombre" placeholder="Name" required="">
 				</div>
 
-				<!--div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
-					<span class="label-input100">Email *</span>
-					<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
-				</div>
 
-				<div class="wrap-input100 bg1 rs1-wrap-input100">
-					<span class="label-input100">Phone</span>
-					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
-				</div-->
 
-				<div class="wrap-input100 input100-select bg1" data-validate="Se debe entrar el sector de la persona!">
+				<div class="wrap-input100 input100-select bg1" data-validate="Required" required="">
 					<span class="label-input100">Sector</span>
 					<div>
 						<select id="sector" class="js-select2" name="sector">
-							<option>Elige el sector</option>
+							<option>--Seleccione el sector--</option>
 							<#list sectores as sector>
 								<option>${sector.sector}</option>
 							</#list>
@@ -72,11 +65,11 @@
 					</div>
 				</div>
 
-				<div class="wrap-input100 input100-select bg1" data-validate="Se debe entrar el nivel escolar de la persona!">
+				<div class="wrap-input100 input100-select bg1" data-validate="Required">
 					<span class="label-input100">Nivel escolar</span>
 					<div>
 						<select id="nivel" class="js-select2" name="nivel">
-							<option>Elige el nivel educativo</option>
+							<option>-- nivel educativo---</option>
 							<#list nivelesEducativos as nivel>
 								<option>${nivel.nivel}</option>
 							</#list>
@@ -85,49 +78,10 @@
 					</div>
 				</div>
 
-				<!--div-- class="w-full dis-none js-show-service">
-					<div class="wrap-contact100-form-radio">
-						<span class="label-input100">What type of products do you sell?</span>
 
-						<div class="contact100-form-radio m-t-15">
-							<input class="input-radio100" id="radio1" type="radio" name="type-product" value="physical" checked="checked">
-							<label class="label-radio100" for="radio1">
-								Phycical Products
-							</label>
-						</div>
-
-						<div class="contact100-form-radio">
-							<input class="input-radio100" id="radio2" type="radio" name="type-product" value="digital">
-							<label class="label-radio100" for="radio2">
-								Digital Products
-							</label>
-						</div>
-
-						<div class="contact100-form-radio">
-							<input class="input-radio100" id="radio3" type="radio" name="type-product" value="service">
-							<label class="label-radio100" for="radio3">
-								Services Consulting
-							</label>
-						</div>
-					</div>
-
-					<div class="wrap-contact100-form-range">
-						<span class="label-input100">Budget *</span>
-
-						<div class="contact100-form-range-value">
-							$<span id="value-lower">610</span> - $<span id="value-upper">980</span>
-							<input type="text" name="from-value">
-							<input type="text" name="to-value">
-						</div>
-
-						<div class="contact100-form-range-bar">
-							<div id="filter-bar"></div>
-						</div>
-					</div>
-				</div-->
 
 				<div class="wrap-input100 validate-input bg0 rs1-alert-validate">
-					<span class="label-input100">Localización</span>
+					<span class="label-input100">Location</span>
 					<textarea id="geolocalizacion" class="input100" name="geolocalizacion" readonly="readonly">No se pudo obtener su localización...</textarea>
                     <div class="hiddenValue">
                         <p id="LblLat" name="LblLat1">0</p>
@@ -203,7 +157,7 @@
   gtag('config', 'UA-23581568-13');
 </script>
 <script>
-	var db = new Dexie("EncuestasDB");
+	var db = new Dexie("Gerard_Encuesta");
 	db.version(1).stores({
 		encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
 	});

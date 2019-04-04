@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Rokkitt" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {font-family: Arial;}
+        body {
+            font-family: Arial;
+
+        }
 
         /* Style the tab */
         .tab {
             overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            border: 0px solid #1eb4ff;
+            background-image: url("/images/bann.jpg");
+
+
         }
 
         /* Style the buttons inside the tab */
@@ -22,6 +28,8 @@
             padding: 14px 16px;
             transition: 0.3s;
             font-size: 17px;
+            margin: 3px;
+
         }
 
         /* Change background color of buttons on hover */
@@ -31,14 +39,14 @@
 
         /* Create an active/current tablink class */
         .tab button.active {
-            background-color: #ccc;
+            background-color: #030303;
         }
 
         /* Style the tab content */
         .tabcontent {
-            display: none;
+            display: flex;
             padding: 6px 12px;
-            border: 1px solid #ccc;
+            border: 2px solid #ccc;
             border-top: none;
         }
     </style>
@@ -48,9 +56,9 @@
 </head>
 <body>
 
-<div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'formulario')" id="defaultOpen">Formulario</button>
-    <button class="tablinks" onclick="openCity(event, 'tabla')">Datos Locales</button>
+<div class="tab" >
+    <button class="btn btn-secondary btn-lg " onclick="openCity(event, 'formulario')" id="defaultOpen">Formulario</button>
+    <button class="btn btn-secondary btn-lg" onclick="openCity(event, 'tabla')">Datos Locales</button>
 </div>
 
 <div id="formulario" class="tabcontent">
@@ -81,39 +89,7 @@
     document.getElementById("defaultOpen").click();
 </script>
 
-<!--script>
-    function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-                /*make an HTTP request using the attribute value as the file name:*/
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                        /*remove the attribute, and call this function once more:*/
-                        elmnt.removeAttribute("w3-include-html");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /*exit the function:*/
-                return;
-            }
-        }
-    }
-</--script>
 
-<script>
-    includeHTML();
-</script-->
 <!--===============================================================================================-->
 <script src="js/geolocation.js"></script>
 <!--===============================================================================================-->

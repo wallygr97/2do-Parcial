@@ -43,7 +43,9 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+  background-image: url("../images/bann.jpg");
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rokkitt', serif;
 }
 
 /*---------------------------------------------*/
@@ -51,7 +53,7 @@ a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: #2c1bff;
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -157,8 +159,8 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 
-.bg0 {background-color: #fff;}
-.bg1 {background-color: #f7f7f7;}
+.bg0 {background-color: #d8ffbf;}
+.bg1 {background-color: #d8ffbf;}
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -177,6 +179,9 @@ iframe {
   align-items: center;
   padding: 15px;
   background: #e6e6e6;
+  background-image: url("../images/bann.jpg");
+  font-family: 'Rokkitt', serif;
+  font-size: 23px;
   
 }
 
@@ -186,6 +191,7 @@ iframe {
   border-radius: 10px;
   overflow: hidden;
   padding: 62px 55px 90px 55px;
+  background-image: url("../images/image.jpg");
 }
 
 
@@ -226,6 +232,8 @@ iframe {
   border-radius: 13px;
   padding: 10px 30px 9px 22px;
   margin-bottom: 20px;
+  font-family: 'Rokkitt', serif;
+  font-size: 23px;
 }
 
 .rs1-wrap-input100 {
@@ -233,18 +241,19 @@ iframe {
 }
 
 .label-input100 {
-  font-family: Montserrat-SemiBold;
+  font-family: 'Rokkitt', serif;
   font-size: 10px;
   color: #393939;
   line-height: 1.5;
   text-transform: uppercase;
+  font-size: 20px;
 }
 
 .input100 {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Montserrat-SemiBold;
+  font-family: 'Rokkitt', serif;
   font-size: 18px;
   color: #555555;
   line-height: 1.2;
