@@ -16,8 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 public class RutasSpark {
     public void iniciarSpark() {
@@ -27,7 +26,7 @@ public class RutasSpark {
         List<Encuesta> encuestasLocales = new ArrayList<>();
         List<Sector> listaSectores = ServiciosSectores.getInstancia().listatOrdenados();
         List<NivelEducativo> listaNiveles = ServiciosNivelEducativo.getInstancia().listatOrdenados();
-
+        port(4562);
 
         get("/", (request, response) -> {
             response.redirect("/offlineApp");
