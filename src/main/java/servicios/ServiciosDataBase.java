@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class ServiciosDataBase {
     private static ServiciosDataBase blogDBInstancia;
-    private String URL = "jdbc:h2:tcp://localhost/~/Gerard_Encuesta";
+    private String URL = "jdbc:h2:tcp://localhost/~/Gerard";
 
 
     private  ServiciosDataBase(){

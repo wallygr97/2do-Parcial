@@ -158,7 +158,7 @@
   gtag('config', 'UA-23581568-13');
 </script>
 <script>
-	var db = new Dexie("Gerard_Encuesta");
+	var db = new Dexie("Gerard");
 	db.version(1).stores({
 		encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
 	});
