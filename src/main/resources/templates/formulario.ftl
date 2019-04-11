@@ -165,8 +165,8 @@
 		encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
 	});
 	function crearEncuesta(){
-		var lat=document.getElementById("LblLat").textContent;;
-		var lon=document.getElementById("LblLon").textContent;;
+		var lat="19.4494464";
+		var lon="-70.6824516";
 		var nombre = document.getElementsByName("nombre")[0].value;
 		var sector = document.getElementsByName("sector")[0].value;
 		var nivel = document.getElementsByName("nivel")[0].value;
