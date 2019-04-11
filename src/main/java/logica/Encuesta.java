@@ -1,8 +1,7 @@
 package logica;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
@@ -101,4 +100,3 @@ public class Encuesta implements Serializable {
         return Double.toString(longitud).substring(0,6);
     }
 }
-

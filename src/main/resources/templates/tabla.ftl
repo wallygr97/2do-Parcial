@@ -156,7 +156,7 @@
             document.getElementById("guardar-modificacion").onclick = function () { actualizarEncuesta(encuesta.idEncuesta)};
         }
         function llenarTabla() {
-            var db = new Dexie("Gerard_Encuesta");
+            var db = new Dexie("Gerard_Encuesta_nuevo");
             db.version(1).stores({
                 encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
             });
@@ -178,7 +178,7 @@
         }
 
         function eliminarEncuesta(idEncuesta){
-            var db = new Dexie("Gerard_Encuesta");
+            var db = new Dexie("Gerard_Encuesta_nuevo");
             db.version(1).stores({
                 encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
             });
@@ -187,7 +187,7 @@
         }
 
         function modificarEncuesta(id){
-            var db = new Dexie("Gerard_Encuesta");
+            var db = new Dexie("Gerard_Encuesta_nuevo");
             db.version(1).stores({
                 encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
             });
@@ -202,7 +202,7 @@
         }
 
         function actualizarEncuesta(id){
-            var db = new Dexie("Gerard_Encuesta");
+            var db = new Dexie("Gerard_Encuesta_nuevo");
             db.version(1).stores({
                 encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
             });
@@ -222,7 +222,7 @@
             var table = document.getElementsByTagName("tbody")[0];
 
             if(table.rows.length > 0 ){
-                var db = new Dexie("Gerard_Encuesta");
+                var db = new Dexie("Gerard_Encuesta_nuevo");
                 db.version(1).stores({
                     encuestas: '++idEncuesta,nombre,sector,nivel,longitud,latitud'
                 });

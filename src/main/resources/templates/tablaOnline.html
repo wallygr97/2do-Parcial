@@ -4,82 +4,81 @@
 	<title>Table V01</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
+	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="Table_Responsive_v1/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/animate/animate.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/css/util.css">
 	<link rel="stylesheet" type="text/css" href="Table_Responsive_v1/css/main.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-<!--===============================================================================================-->
-<style>
-
-	.refresh{
-		padding-bottom: 20px;
-		margin-left: 100px;
-	}
-</style>
+	<!--===============================================================================================-->
+	<style>
+		.refresh{
+			padding-bottom: 20px;
+			margin-left: 100px;
+		}
+	</style>
 </head>
 <body>
-	
-	<div class="limiter">
-		<div class="container-table100">
-			<div class="refresh">
-				<button class="btn btn-success" onclick="window.location='/offlineApp';"> <i class="fas fa-mobile-alt"></i></i> Ver Datos Online </button>
-			</div>
-			<div class="wrap-table100">
-				<div class="table100">
-					<table>
-						<thead>
-							<tr class="table100-head">
-								<th class="column1">Código</th>
-								<th class="column2">Nombre</th>
-								<th class="column4">Nivel Escolar</th>
-								<th class="column5">Latitud</th>
-								<th class="column6">Longitud</th>
-								<th class="column8">Ubicación</th>
-							</tr>
-						</thead>
-						<tbody>
-							<#list encuestas as encuesta>
-								<tr>
-									<td class="column1">${encuesta.idEncuesta}</td>
-									<td class="column2">${encuesta.nombre}</td>
-									<td class="column4">${encuesta.nivelEducacion.nivel}</td>
-									<td class="column5">${encuesta.latitudCorta()}</td>
-									<td class="column6">${encuesta.longitudCorta()}</td>
-									<td class="column8"><button class="btn btn-success" onclick=" window.open('/mapa/${encuesta.latitudString()}/${encuesta.longitudString()}','_blank')"> Ver Mapa </button></td>
-								</tr>
-							</#list>
-						</tbody>
-					</table>
-				</div>
+
+<div class="limiter">
+	<div class="container-table100">
+		<div class="refresh">
+			<button class="btn btn-success" onclick="window.location='/offlineApp';"> <i class="fas fa-mobile-alt"></i></i> Ver Datos Online </button>
+		</div>
+		<div class="wrap-table100">
+			<div class="table100">
+				<table>
+					<thead>
+					<tr class="table100-head">
+						<th class="column1">Código</th>
+						<th class="column2">Nombre</th>
+						<th class="column4">Nivel Escolar</th>
+						<th class="column5">Latitud</th>
+						<th class="column6">Longitud</th>
+						<th class="column8">Ubicación</th>
+					</tr>
+					</thead>
+					<tbody>
+					<#list encuestas as encuesta>
+					<tr>
+						<td class="column1">${encuesta.idEncuesta}</td>
+						<td class="column2">${encuesta.nombre}</td>
+						<td class="column4">${encuesta.nivelEducacion.nivel}</td>
+						<td class="column5">${encuesta.latitudCorta()}</td>
+						<td class="column6">${encuesta.longitudCorta()}</td>
+						<td class="column8"><button class="btn btn-success" onclick=" window.open('/mapa/${encuesta.latitudString()}/${encuesta.longitudString()}','_blank')"> Ver Mapa </button></td>
+					</tr>
+					</#list>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
+</div>
 
 
-	
 
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
 
 </body>
 </html>
